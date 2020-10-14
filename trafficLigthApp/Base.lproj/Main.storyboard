@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="trafficLigthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZG-E4-pHl">
-                                <rect key="frame" x="157.5" y="110" width="99" height="100"/>
+                                <rect key="frame" x="138" y="66" width="99" height="100"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9Lq-vr-H9e"/>
@@ -25,7 +25,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kl-Ka-q1G">
-                                <rect key="frame" x="157.5" y="248" width="99" height="100"/>
+                                <rect key="frame" x="138" y="204" width="99" height="100"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="QjO-yo-LLO"/>
@@ -33,7 +33,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbf-OM-aGQ">
-                                <rect key="frame" x="157.5" y="386" width="99" height="100"/>
+                                <rect key="frame" x="138" y="342" width="99" height="100"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Uwf-T3-0py"/>
@@ -41,7 +41,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-N7-9wY">
-                                <rect key="frame" x="43" y="757" width="328" height="45"/>
+                                <rect key="frame" x="23.5" y="562" width="328" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="9b9-em-KVx"/>
@@ -51,6 +51,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleLightButtonPresed" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgZ-bv-eSP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,6 +62,7 @@
                             <constraint firstItem="nbf-OM-aGQ" firstAttribute="top" secondItem="6kl-Ka-q1G" secondAttribute="bottom" constant="38" id="1Km-zT-9h8"/>
                             <constraint firstItem="AzD-N7-9wY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Vk-I7-KBD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AzD-N7-9wY" secondAttribute="bottom" constant="60" id="73o-k8-Xd0"/>
+                            <constraint firstItem="nbf-OM-aGQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E8q-CY-RSC"/>
                             <constraint firstItem="6kl-Ka-q1G" firstAttribute="top" secondItem="WZG-E4-pHl" secondAttribute="bottom" constant="38" id="IYF-Yf-m1e"/>
                             <constraint firstItem="6kl-Ka-q1G" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gaF-9j-QUq"/>
                             <constraint firstItem="WZG-E4-pHl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ibm-A2-F4v"/>
@@ -66,6 +70,12 @@
                             <constraint firstItem="WZG-E4-pHl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="z1w-cS-nqT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonStart" destination="AzD-N7-9wY" id="kIz-Mg-Qvu"/>
+                        <outlet property="greenLight" destination="nbf-OM-aGQ" id="mqx-uR-2xp"/>
+                        <outlet property="redLight" destination="WZG-E4-pHl" id="mDg-TO-xRm"/>
+                        <outlet property="yellowLight" destination="6kl-Ka-q1G" id="a4V-em-0kb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
