@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         buttonStart.layer.cornerRadius = 10
         
+        redLight.layer.cornerRadius = 50
+        yellowLight.layer.cornerRadius = 50
+        greenLight.layer.cornerRadius = 50
+        
         redLight.alpha = lightOff
         yellowLight.alpha = lightOff
         greenLight.alpha = lightOff
